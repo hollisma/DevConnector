@@ -1,5 +1,5 @@
 
------------------------------------
+---------------------------------------------------------------------------------------------------
 GENERAL
 
 dependencies: 
@@ -14,5 +14,11 @@ dependencies:
 dev dependencies (installed with -D):
   nodemon: updates server so we don't have to constantly refresh
   concurrently: run server and client at same time
+---------------------------------------------------------------------------------------------------
+TESTING
 
------------------------------------
+endpoints:
+  use Postman to send different types of requests and information;
+  can make collections to make testing easier;
+
+
