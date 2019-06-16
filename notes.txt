@@ -30,16 +30,26 @@ client dependencies:
   redux-devtools-extension
   moment: date and time library
   react-moment: use moment within component
+  uuid: generate random IDs
 add proxy to package.json to make using axios easier
 
 ---------------------------------------------------------------------------------------------------
 REACT
 
 use 'racf' to create boilerplate for functional component with react-snippets extension
-redux:
+
+---------------------------------------------------------------------------------------------------
+REDUX
+
+set up: 
   must create a store.js, which is basically boilerplate;
   wrap app.js component with a <Provider store={store}> to connect react with redux;
   also need an index.js to combine reducers;
+intuition: 
+  types are types of actions;
+  actions are actions;
+  action creaters create actions;
+  reducers are named after the array.reduce method - they take actions and change the state;
 
 ---------------------------------------------------------------------------------------------------
 TESTING
