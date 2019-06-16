@@ -14,6 +14,24 @@ dependencies:
 dev dependencies (installed with -D):
   nodemon: updates server so we don't have to constantly refresh
   concurrently: run server and client at same time
+
+---------------------------------------------------------------------------------------------------
+CLIENT
+
+npx create-react-app client:
+  npx lets us use create-react-app without installing it on our machine; 
+  did not work for me; 
+client dependencies: 
+  axios: make HTTP requests
+  react-router-dom: router
+  redux
+  react-redux
+  redux-thunk: middleware to make asynchronous requests
+  redux-devtools-extension
+  moment: date and time library
+  react-moment: use moment within component
+add proxy to package.json to make using axios easier
+
 ---------------------------------------------------------------------------------------------------
 TESTING
 
