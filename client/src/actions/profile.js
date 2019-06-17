@@ -33,7 +33,11 @@ export const createProfile = (
       }
     };
 
+    console.log("before post:", formData);
+
     const res = await axios.post("/api/profile", formData, config);
+
+    console.log("after post:", res.data);
 
     dispatch({
       type: GET_PROFILE,
