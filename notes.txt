@@ -58,4 +58,22 @@ endpoints:
   use Postman to send different types of requests and information;
   can make collections to make testing easier;
 
+---------------------------------------------------------------------------------------------------
+HEROKU
 
+create "production.json" in config folder and copy default.json;
+in .gitignore, ignore config/default.json;
+need to build out static assets. Can do npm run build to build a new index.html in static folder. 
+^ An easier way is to build on server using a postbuild script. 
+  in package.json, add "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+in server.js, take out "API running" thing, import 'path' module, and under the api routes, add this:
+  
+  // Serve static assets in production
+  if (process.env.NODE_ENV === 'production') {
+    // Set static folder
+    app.use(express.static('client/build'));
+
+    app.get('*', (req, res) => {
+      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+  }
