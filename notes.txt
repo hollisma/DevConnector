@@ -77,3 +77,8 @@ in server.js, take out "API running" thing, import 'path' module, and under the 
       res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
   }
+
+make sure you have PORT = process.env.PORT;
+use "heroku create" to create app;
+goto deploy tab and set heroku as a remote repository;
+then "git push heroku master"
