@@ -65,7 +65,7 @@ export const addLike = postId => async dispatch => {
 // Remove like
 export const removeLike = postId => async dispatch => {
   try {
-    const res = await axios.delete(`/api/posts/unlike/${postId}`);
+    const res = await axios.put(`/api/posts/unlike/${postId}`);
 
     dispatch({
       type: UPDATE_LIKES,
